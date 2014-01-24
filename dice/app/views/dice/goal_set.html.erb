@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>GT's Dice Game</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Begin page content -->
+      <div class="container">
+        <div class="page-header">
+          <h1>Dice Game</h1>
+        </div>
+        <p>
+        <img src = <%= "https://uchicago.s3.amazonaws.com/d0#{@die_1.to_s()}.png" %> alt=<%= @die_1.to_s() %>>
+        <img src = <%= "https://uchicago.s3.amazonaws.com/d0#{@die_2.to_s()}.png" %> alt=<%= @die_2.to_s() %>>
+        <h2>Your goal is now <%= @goal.to_s() %>.</h2>
+        <h3>Now try to get a <%= @goal.to_s() %> before you roll a 7.</h3>
+  			<a class="btn btn-large btn-success btn-primary" type="button" href = <%= "/in_progress?goal=#{@goal}" %> >Roll the dice</a>
+		</p>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted">A fun little thing brought to you by: GT Wrobel</p>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  
+
+</body></html>
